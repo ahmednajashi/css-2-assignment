@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks Webpage</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Task 1: Hover effect on links */
+        .link-container {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .link-container a {
+            text-decoration: none;
+            color: white;
+            background-color: green;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .link-container a.after-hover {
+            background-color: white;
+            color: green;
+            border: 2px solid green;
+            border-radius: 0;
+            padding: 8px 18px; /* Adjust to account for border width */
+        }
+        .link-container a:hover {
+            background-color: white;
+            color: green;
+            border: 2px solid green;
+            border-radius: 0;
+            padding: 8px 18px; /* Adjust to account for border width */
+        }
+
+        /* Task 2: Custom list styling */
+        ul.custom-list {
+            background-color: yellow;
+            list-style-type: none;
+            padding: 10px;
+        }
+        ul.custom-list li::before {
+            content: "• ";
+            color: red;
+        }
+
+        /* Task 3: Z-index with image effect using background */
+        .heading-container {
+            position: relative;
+            display: inline-block;
+        }
+        .heading-container::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            width: 100px;
+            height: 100%;
+            background-image:url(images.jpeg) no-repeat center left;
+            background-size: cover;
+        }
+        .heading-container h1 {
+            position: relative;
+            padding-left: 110px; /* Adjust this to fit the background */
+        }
+
+        /* Task 4: Display property */
+        .inline {
+            display: inline;
+        }
+        .inline-block {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            margin: 5px;
+        }
+        .block {
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Task 1: Hover effect on links -->
+    <div class="link-container">
+        <h2>Before hover</h2>
+        <a href="#">This is a link</a>
+        <h2>After Hover</h2>
+        <a href="#" class="after-hover">This is a link</a>
+    </div>
+    
+    <hr>
+
+    <!-- Task 2: Custom list styling -->
+    <ul class="custom-list">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ul>
+
+    <hr>
+
+    <!-- Task 3: Z-index with image effect using background -->
+    <div class="heading-container">
+        <h1>This is a heading</h1>
+    </div>
+    <p>Because the image has a z-index of -1, it will be placed behind the text.</p>
+
+    <hr>
+
+    <!-- Task 4: Display property -->
+    <h2>The display Property</h2>
+    <h3>display: inline</h3>
+    <div class="inline">this is text this is text this is text</div>
+    <div class="inline">hello</div>
+    <div class="inline">there</div>
+    <div class="inline">this is text this is text this is text</div>
+    
+    <h3>display: inline-block</h3>
+    <div class="inline-block">hello</div>
+    <div class="inline-block">there</div>
+    
+    <h3>display: block</h3>
+    <div class="block">hello</div>
+    <div class="block">there</div>
+</body>
+</html>
